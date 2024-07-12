@@ -1,0 +1,63 @@
+<div class="fondo_opacidad" *ngIf="cerrarImagen">
+    <p class="cerrar_imagen" (click)="cerrar_imagen() ">x</p>
+
+    <img src="{{detalleComic.data.results[0].thumbnail.path}}.jpg" class="tamano_imagen_centrada">
+</div>
+
+
+<div class="contenedor_principal_detalle_comic">
+    <div class="container">
+        <div class="row">
+            <h1 class="titulo_comic">{{ detalleComic.data.results[0].title }}</h1>
+
+            <div class="col-md-4 contenedor_relativo">
+                <img src="{{detalleComic.data.results[0].thumbnail.path}}.jpg" class="tamano_imagen_comic" (click)="abrir_imagen()">
+            </div>
+
+            <div class="col-md-7 contenido_ltsx">
+
+
+                <div class="contenedor_detalleComic" *ngIf="mostrarDescripcion">
+                    <h2>DESCRIPCION</h2>
+                    <p class="texto_lts"> *{{ detalleComic.data.results[0].description }}</p>
+                </div>
+
+
+                <div class="contenedor_detalleComic" *ngIf="mostrarCreadores">
+
+                    <h2>CREADORES</h2>
+
+                    <p class="texto_lts" *ngFor="let precio of detalleComic.data.results[0].creators.items">*{{ precio.name }} - <span> {{ precio.role }} </span></p>
+
+
+                </div>
+
+                <div class="contenedor_detalleComic">
+                    <h3>EDICION Y PRECIO</h3>
+                    <p class="texto_lts" *ngFor="let edicion of detalleComic.data.results[0].prices"> *{{ edicion.type }} - ${{ edicion.price }} </p>
+
+                </div>
+
+                <div class="contenedor_detalleComic">
+                    <h3>FORMATO</h3>
+                    <p class="texto_lts"> *{{ detalleComic.data.results[0].format }} </p>
+                </div>
+
+                <div class="contenedor_detalleComic">
+                    <h3>SERIES</h3>
+                    <p class="texto_lts"> *{{ detalleComic.data.results[0].series.name }} </p>
+                </div>
+
+
+                <div class="contenedor_detalleComic" *ngIf="mostrarCaracteres">
+                    <h3>PERSONAJES</h3>
+                    <p class="texto_lts" *ngFor="let caracteres of detalleComic.data.results[0].characters.items"> *{{ caracteres.name }} </p>
+                </div>
+
+                <button class="btn btn-danger boton_volver" (click)="volver()">Volver</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>

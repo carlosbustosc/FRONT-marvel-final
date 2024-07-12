@@ -1,0 +1,59 @@
+<div class="contenedor_principal_series">
+    <div class="container container_css">
+
+        <div class="row tarjeta_mobile">
+            <form>
+                <div>
+                    <form>
+                        <select class="form-select" (change)="seleccionarTipoSerie( $event )">
+                            <option></option>
+                            <option value="comic">comic</option>
+                            <option value="magazine">magazine</option>
+                            <option value="trade paperback">trade paperback</option>
+                            <option value="hardcover">hardcover</option>
+                            <option value="digest">digest</option>
+                            <option value="graphic novel">graphic novel</option>
+                            <option value="digital comic">digital comic</option>
+                            <option value="infinite comic">infinite comic</option>
+                        </select>
+                    </form>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="row tarjeta_mobile" *ngIf="mostrarSeries">
+            <div class="col-md-3 mt-5 tarjetasSeries" *ngFor="let series of seriesMarvel" (click)="verSeries( series.id )">
+                <div class="card mb-3 fondo_tarjeta_ltsx">
+                    <h2 class="titulo_tarjeta_juego anio">Estreno: {{ series.startYear }}</h2>
+                    <div class="imagen_presentacion" style="background-image: url('{{ series.thumbnail.path }}.jpg')"></div>
+
+                    <div class="card-body">
+
+                        <h5 class="card-title titulo_serie">{{ series.title }}</h5>
+                        <p class="card-text badge rounded-pill text-bg-info">Tipo: {{ series.type }} </p><br>
+
+                        <!--<a [href]="series.urls[0].url" class="btn btn-primary boton_ver_mas" target="_blank">Ver pagina</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tarjeta_mobile" *ngIf="mostrarSeriesCombo">
+            <div class="col-md-3 mt-5 tarjetasSeries" *ngFor="let seriesSelect of seriesComboSelect" (click)="verSeries( seriesSelect.id )">
+                <div class="card mb-3 fondo_tarjeta_ltsx">
+                    <h2 class="titulo_tarjeta_juego anio">Estreno: {{ seriesSelect.startYear }}</h2>
+                    <div class="imagen_presentacion" style="background-image: url('{{ seriesSelect.thumbnail.path }}.jpg')"></div>
+
+                    <div class="card-body">
+                        <h5 class="card-title titulo_serie">{{ seriesSelect.title }}</h5>
+                        <p class="card-text badge rounded-pill text-bg-info">Tipo: {{ seriesSelect.type }} </p><br>
+
+                        <!--<a [href]="series.urls[0].url" class="btn btn-primary boton_ver_mas" target="_blank">Ver pagina</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="contenedor_juegos" *ngIf="mostrarPeliculas">
+    <p class="cerrar_video" (click)="cerrar_peliculas()">X</p>
+
+    <div class="contenedor_video_marvel">
+        <iframe id="1" [src]="sanarIframe" allowfullscreen frameborder="0" scrolling="no" class="video_juego_ltsx"></iframe>
+        <h1 class="titulo">{{ UnaPelicula.titulo }}</h1>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="row tarjeta_mobile colocar_margin_bottom">
+            <h1 class="titulo_juegos">DISRUTE TODOS LOS TRAILERS</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let pelicula of todasPeliculas; let i = index" (click)="mostrarVideo(i)">
+                <h2 class="titulo_tarjeta_juego anio">{{ pelicula.anio }}</h2>
+                <img [src]="pelicula.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">{{ pelicula.titulo }}</h1>
+            </div>
+        </div>
+    </div>
+</div>

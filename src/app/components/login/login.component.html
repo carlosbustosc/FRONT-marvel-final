@@ -1,0 +1,25 @@
+<div class="contenedor_principal">
+    <div class="container">
+        <div class="row">
+            <div class="contenedor_formulario">
+                <form [formGroup]="formularioLogin" (ngSubmit)="login()">
+                    <div class=" separar_campos">
+                        <label class="nombre_label">Email</label>
+                        <input  type="email" class="form-control"   formControlName="emailLogin" placeholder="Escriba su correo electronico">
+                        <small class="text-danger" *ngIf="emailVacio">Escriba un Email</small>
+                    </div>
+                    <div class=" separar_campos">
+                        <label class="nombre_label">Contraseña</label>
+                        <input  type="password" class="form-control" formControlName="passLogin" placeholder="Escriba su contraseña">
+                        <small class="text-danger" *ngIf="passVacio">llene el campo completamente</small>
+                    </div>
+
+                    <div class=" separar_campos bajar_boton">
+                        <button type="submit" class="btn btn-danger">Entrar</button> <span [routerLink]="['/registro']" class="registro_btn">¿no esta registrado? Registarme</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

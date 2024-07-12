@@ -1,0 +1,25 @@
+<div class="contenedor_juegos" *ngIf="mostrarLanzamientos">
+    <p class="cerrar_video" (click)="cerrar_Lanzamientos()">X</p>
+
+    <div class="contenedor_video_marvel">
+        <img [src]="unLanzamiento.imagen" class="imagen_grande_lanzamiento" />
+        <h1 class="titulo">{{ unLanzamiento.titulo }}</h1>
+        <h2 class="titulo autor_comic_lanzamiento">{{ unLanzamiento.autor }}</h2>
+        <a [href]=" unLanzamiento.url " class="btn btn-primary" target="_blank">Ir a la pagina</a>
+
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="row tarjeta_mobile colocar_margin_bottom">
+            <h1 class="titulo_juegos">NUEVOS LANZAMIENTOS</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let estreno of lanzamientos; let i = index" (click)="mostrarImagen( i )">
+                <h2 class="titulo_tarjeta_juego anio">{{ estreno.titulo }}</h2>
+                <img [src]="estreno.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">Autor: {{ estreno.autor }}</h1>
+            </div>
+        </div>
+    </div>
+</div>

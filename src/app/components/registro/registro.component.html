@@ -1,0 +1,35 @@
+<div class="contenedor_principal">
+    <div class="container">
+        <div class="row">
+            <div class="contenedor_formulario">
+                <form [formGroup]="formulario" (ngSubmit)="enviarRegistro()">
+                    <div class=" separar_campos">
+                        <label class="nombre_label">Nombre</label>
+                        <input type="text" class="form-control" formControlName="nombre" placeholder="Escriba su nombre"/>
+                        <small class="text-danger" *ngIf="nombreVacio">llene el campo</small>
+                    </div>
+                    <div class=" separar_campos">
+                        <label class="nombre_label">Email</label>
+                        <input  type="email" class="form-control" formControlName="email" placeholder="Escriba su correo electronico">
+                        <small class="text-danger" *ngIf="correoVacio">llene el campo completamente</small>
+                    </div>
+                    <div class=" separar_campos">
+                        <label class="nombre_label">Contraseña</label>
+                        <input  type="password" class="form-control" formControlName="pass" placeholder="Escriba su contraseña">
+                        <small class="text-danger" *ngIf="passVacio">llene el campo completamente</small>
+                    </div>
+                    <div class=" separar_campos">
+                        <label class="nombre_label">repita Contraseña</label>
+                        <input  type="password" class="form-control"  formControlName="pass2" placeholder="Escriba su contraseña">
+                        <small class="text-danger" *ngIf="passVacio2">La contraseña no es igual</small>
+                    </div>
+
+                    <div class=" separar_campos bajar_boton">
+                        <button type="submit" class="btn btn-danger">Registrar</button><span [routerLink]="['/login']" class="login_btn">Si ya estas registrado entra al Login</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

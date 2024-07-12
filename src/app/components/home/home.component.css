@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+.contenedor_principal_ltsx {
+    background-image: url('https://cdn.theatlantic.com/thumbor/NgtP6sVSUdqOi0QRgZpbjKpqf-4=/0x260:3256x2092/1600x900/media/img/mt/2017/05/RTR1N7F6/original.jpg');
+    background-size: cover;
+    width: 100%;
+    display: table;
+    background-attachment: fixed;
+}
+
+.contenedor_introduccion {
+    width: 800px;
+    display: table;
+    padding: 20px 40px;
+}
+
+.imagen_fondo_intro {
+    width: 100%;
+}
+
+.contenedor_introduccion_ltsx {
+    width: 100%;
+    display: table;
+    background-color: #000;
+    padding: 60px 70px;
+}
+
+p.texto_introducion_marvel {
+    color: #fff;
+    line-height: 27px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+.bajar_contenido {
+    margin-top: 40px;
+}
+
+.quitar_paddings {
+    padding: 0px;
+}
+
+.titulo_home {
+    font-size: 42px;
+    padding: 24px 0px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Comic Neue', cursive;
+}
+
+.centrar_contenido {
+    display: flex;
+    text-align: center;
+}
+
+.contenido_peliculas {
+    width: 100%;
+    display: table;
+    background-color: #fff;
+    padding: 80px;
+}
+
+.text-blanco {
+    line-height: 27px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+.text-blanco {
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
+.imagen_pelicula {
+    width: 100%;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.imagen_pelicula:hover {
+    transform: translateY(-30px);
+}
+
+.color_fondo_blanco {
+    background-color: #fff;
+    padding-bottom: 52px;
+}
+
+p.titulo_pelicula {
+    padding: 20px 0px 0px 0px;
+    text-align: center;
+    line-height: 19px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.anio_ltsx {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #8b8b8b;
+}
+
+.titulo_home_fondo_blanco {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.portada_comic {
+    text-align: center;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.portada_comic:hover {
+    transform: translateY( -25px);
+}
+
+.titulo_comic_blanco {
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 13px 0px;
+}
+
+.iframe_juego {
+    width: 800px;
+    height: 452px;
+}
+
+.caja_video {
+    width: 800px;
+    display: table;
+    margin: auto;
+}
+
+.titulo_comic_negro {
+    text-align: center;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 13px 0px;
+}
+
+.portada_juego {
+    width: 100%;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.portada_juego:hover {
+    transform: translateY(-30px);
+}
+
+.video_juegos {
+    width: 100%;
+    height: 275px;
+}
+
+.contenedor_espacio {
+    width: 100%;
+    height: 200px;
+}
+
+.espacio_paralax {
+    margin-top: 200px;
+}
+
+.carousel-control-next-icon {
+    background-color: #000;
+    padding: 33px;
+}
+
+.carousel-control-prev-icon {
+    background-color: #000;
+    padding: 33px;
+}
+
+.bajar_primer_titulo {
+    margin-top: 21%;
+}
+
+@media(max-width:650px) {
+    p.titulo_pelicula {
+        width: 100%;
+        margin-bottom: 3px;
+    }
+    .caja_video {
+        width: 100%;
+    }
+    iframe.iframe_juego {
+        width: 100%;
+        height: 250px;
+    }
+    .titulo_home.bajar_primer_titulo {
+        width: 100%;
+    }
+    p.text-blanco {
+        width: 100%;
+    }
+    .container-fluid.quitar_paddings {
+        margin-top: 66px;
+    }
+    .espacio_paralax {
+        margin-top: 0;
+    }
+    .bajar_primer_titulo {
+        margin-top: 0px;
+        font-family: 'Comic Neue', cursive;
+        font-size: 31px;
+    }
+    .contenedor_introduccion_ltsx {
+        width: 100%;
+        display: table;
+        background-color: #000;
+        padding: 22px 45px 35px 45px;
+    }
+    .contenido_peliculas {
+        width: 100%;
+        display: table;
+        background-color: #fff;
+        padding: 80px 40px;
+    }
+    .carousel-control-next-icon {
+        background-color: #000;
+        padding: 23px;
+    }
+    .carousel-control-prev-icon {
+        background-color: #000;
+        padding: 23px;
+    }
+    .col-md-2.color_fondo_blanco {
+        text-align: center;
+    }
+    .imagen_pelicula {
+        width: 100%;
+    }
+    .color_fondo_blanco {
+        background-color: #fff;
+        padding-bottom: 52px;
+        line-height: initial;
+    }
+    .row.editar_acho_mobile {
+        padding: 0px 40px;
+        background-color: #fff;
+    }
+    .contenido_peliculas {
+        padding: 80px 40px 36px 40px;
+    }
+    .video_juegos {
+        width: 100%;
+        height: 250px;
+    }
+    .color_fondo_blanco {
+        background-color: #fff;
+        padding-bottom: 35px;
+    }
+    .row.bajar_portadas {
+        padding: 0px 30px;
+        background-color: #fff;
+    }
+    .contenedor_espacio {
+        display: none;
+    }
+    .contenedor_juegos_m {
+        padding: 80px 10px 36px 10px;
+    }
+    img.portada_comic {
+        width: 100%;
+    }
+}
+
+@media(max-width:385px) {
+    .titulo_comic_blanco[_ngcontent-qit-c52] {
+        font-size: 19px;
+    }
+}

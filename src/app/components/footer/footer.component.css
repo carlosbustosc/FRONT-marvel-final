@@ -1,0 +1,43 @@
+        .contenedor_footer {
+            width: 100%;
+            display: table;
+            background-color: #000;
+            text-align: center;
+        }
+        
+        .tamano_imagen_z2 {
+            margin-top: 20px;
+            height: 82px;
+        }
+        
+        .creditos {
+            font-size: 14px;
+            color: #fff;
+            padding: 9px 0px;
+        }
+        
+        @media(max-width:650px) {
+            .tamano_imagen_z2 {
+                margin-top: 20px;
+                height: 80px;
+            }
+            .creditos {
+                font-size: 14px;
+                color: #fff;
+                padding: 9px 0px;
+                margin-top: -17px;
+            }
+        }
+        
+        @media(max-width:385px) {
+            .tamano_imagen_z2 {
+                margin-top: 20px;
+                height: 70px;
+            }
+            .creditos {
+                font-size: 12px;
+            }
+            .creditos {
+                font-size: 11px;
+            }
+        }

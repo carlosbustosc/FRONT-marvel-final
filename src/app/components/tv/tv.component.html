@@ -1,0 +1,52 @@
+<div class="contenedor_juegos" *ngIf="mostrarSerie">
+    <p class="cerrar_video" (click)="ocultarVideo()">X</p>
+    <div class="contenedor_video_marvel">
+        <iframe id="1" [src]="sanarUrl" allowfullscreen frameborder="0" scrolling="no" class="video_juego_ltsx"></iframe>
+        <h1 class="titulo">{{ grupoUnaSerie.titulo }}</h1>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="container">
+
+        <div class="row tarjeta_mobile">
+            <h1 class="titulo_juegos">DISRUTE TODOS LAS SERIES DE TV</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let serieUno of todasSeries[0].marvelDisney; let i = index" (click)="mostrarVideo( '0', 'marvelDisney', i )">
+                <h2 class="titulo_tarjeta_juego anio">{{ serieUno.anio }}</h2>
+                <img [src]="serieUno.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">{{ serieUno.titulo }}</h1>
+            </div>
+        </div>
+
+
+        <div class="row tarjeta_mobile">
+            <h1 class="titulo_juegos">NO FICCIÓN</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let serieDos of todasSeries[1].noFiccion; let i = index" (click)="mostrarVideo( '1', 'noFiccion', i )">
+                <h2 class="titulo_tarjeta_juego anio">{{ serieDos.anio }}</h2>
+                <img [src]="serieDos.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">{{ serieDos.titulo }}</h1>
+            </div>
+        </div>
+
+
+        <div class="row tarjeta_mobile">
+            <h1 class="titulo_juegos">MARVEL HULLU</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let serieTres of todasSeries[2].marvelHulu; let i = index" (click)="mostrarVideo( '2', 'marvelHulu', i )">
+                <h2 class="titulo_tarjeta_juego anio">{{ serieTres.anio }}</h2>
+                <img [src]="serieTres.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">{{ serieTres.titulo }}</h1>
+            </div>
+        </div>
+
+        <div class="row tarjeta_mobile colocar_margin_bottom">
+            <h1 class="titulo_juegos">MARVEL ANIMACIÓN</h1>
+            <div class="col-md-3 mt-5 efecto_tarjeta" *ngFor="let serieTres of todasSeries[3].animacion; let i = index" (click)="mostrarVideo(  '3', 'animacion', i )">
+                <h2 class="titulo_tarjeta_juego anio">{{ serieTres.anio }}</h2>
+                <img [src]="serieTres.imagen" class="imagen_juego" />
+                <h1 class="titulo_tarjeta_juego">{{ serieTres.titulo }}</h1>
+            </div>
+        </div>
+
+    </div>
+</div>

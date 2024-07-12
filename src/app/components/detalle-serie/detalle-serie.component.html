@@ -1,0 +1,45 @@
+
+
+
+<div class="pantalla_principal_detalle_serie" style="background-image:url('{{ cargarDetalleSerie.thumbnail.path }}.jpg') ">
+    
+</div>
+
+<div class="div_sombra">
+    <h5 class="card-title titulo_detalle_serie">{{  cargarDetalleSerie.title }}</h5>
+</div>
+
+
+<div class="container-fluid imagen_de_fondo">
+    <div class="card margin_tarjeta">
+        <div class="row g-0">
+          <div class="col-md-6 alinear_imagen_series">
+            <img src="{{ cargarDetalleSerie.thumbnail.path }}.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body tarjeta_derecha">
+              <p class="card-text">{{ cargarDetalleSerie.description }}</p>
+              <p class="card-text badge text-bg-primary">Año de estreno {{ cargarDetalleSerie.startYear }}</p><br>
+              <p class="card-text badge text-bg-danger">Año de finalización {{ cargarDetalleSerie.endYear }}</p>
+
+              <div class="contenedor_informacion_detalle_series">
+                <h3 class="texto_titulo_detalle">CREADORES</h3>
+                <p class="card-text" *ngFor="let creadores of cargarDetalleSerie.creators.items">{{ creadores.name }}</p>
+              </div>
+
+              <div class="contenedor_informacion_detalle_series">
+                <h3 class="texto_titulo_detalle">COMICS</h3>
+                <p class="card-text" *ngFor="let comics of cargarDetalleSerie.comics.items">{{ comics.name }}</p>
+              </div>
+
+              <div class="contenedor_informacion_detalle_series">
+                <h3 class="texto_titulo_detalle">HISTORIAS</h3>
+                <p class="card-text" *ngFor="let historias of cargarDetalleSerie.stories.items">{{ historias.name }}</p>
+              </div>
+             
+              <button class="btn btn-danger" (click)="volverSeries()">Volver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

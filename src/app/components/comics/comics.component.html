@@ -1,0 +1,75 @@
+<div class="comic_principal_ltsx">
+    <div class="container margen_container_comic">
+
+        <div class="row bajar_contenedor_select">
+
+            <div class="contenedor_select_comics">
+                <form (ngSubmit)="categoriaSeleccionada()">
+                    <div class="form-group contenedor_select">
+                        <label class="texto_indicador">Seleccione la categoria que desea ver</label>
+
+                        <label class="texto_informativo">Seleccione comic, magazine, hardcover, etc.</label>
+                        <select name="categorias" class="form-select" [(ngModel)]="combo1">
+                          
+                            <option value="comic">comic</option>
+                            <option value="magazine">magazine</option>
+                            <option value="trade paperback">trade paperback</option>
+                            <option value="hardcover">hardcover</option>
+                            <option value="digest">digest</option>
+                            <option value="graphic novel">graphic novel</option>
+                            <option value="digital comic">digital comic</option>
+                            <option value="infinite comic">infinite comic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group contenedor_select">
+                        <label class="texto_informativo">Incluir Formatos</label>
+
+                        <select name="edicion" class="form-select" [(ngModel)]="combo2">
+                           
+                            <option value="&hasDigitalIssue=true">Digital</option>
+                            <option value="">Impreso</option>
+
+
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary boton_busqueda_comic">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <!----alerta informativa-->
+        <div class="row alerta_informcion" *ngIf="MostrarInfo">
+            <div class="alert alert-primary" role="alert">
+                <h4 class="alert-heading">¡Hola!</h4>
+                <p>No encontramos resultados para el tipo <span class="destacar_letra">Collection</span>, por favor prueba con <span class="destacar_letra">Comic</span></p>
+
+            </div>
+        </div>
+
+        <!---carga por dejecto--->
+        <div class="row" *ngIf="mostrarComics">
+            <div class="col-md-3 mt-5 tarjeta_caracteristicas" *ngFor="let todosComics of Comics; let i index" (click)="enviarParametro(i.id) ">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ todosComics.thumbnail.path }}.jpg" class="card-img-top img_tamano_desktop" alt="... ">
+                    <div class="card-body fondo_tarjeta">
+                        <h5 class="card-title color_titulo_comic">{{ todosComics.title }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!---carga por select--->
+        <div class="row" *ngIf="mostrarCargaSelect">
+            <div class="col-md-3 mt-5 tarjeta_caracteristicas" *ngFor="let ComicsSelect of CargaSelect; let i index" (click)="enviarParametro(i.id) ">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ ComicsSelect.thumbnail.path }}.jpg" class="card-img-top img_tamano_desktop" alt="... ">
+                    <div class="card-body fondo_tarjeta">
+                        <h5 class="card-title color_titulo_comic">{{ ComicsSelect.title }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

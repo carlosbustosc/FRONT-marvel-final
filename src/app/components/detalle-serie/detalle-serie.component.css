@@ -1,0 +1,113 @@
+.pantalla_principal_detalle_serie {
+    width: 100%;
+    display: table;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 8
+}
+
+.div_sombra {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000c2;
+    position: absolute;
+    z-index: 12;
+    top: 80px;
+}
+
+.margin_tarjeta {
+    margin: 0px auto 0px auto;
+    max-width: 1100px;
+    border: none;
+}
+
+.titulo_detalle_serie {
+    font-size: 52px;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    color: #fff;
+    top: 40%;
+    position: relative;
+}
+
+.texto_titulo_detalle {
+    font-family: 'Comic Neue', cursive;
+    margin-top: 0px;
+}
+
+.tarjeta_derecha {
+    background-color: #000000bf;
+    color: #fff;
+    padding: 20px 50px;
+}
+
+p.card-text {
+    margin-bottom: 5px;
+}
+
+.text-bg-danger {
+    color: #fff!important;
+    background-color: RGBA(220, 53, 69, var(--bs-bg-opacity, 1))!important;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+
+.text-bg-primary {
+    color: #fff!important;
+    background-color: RGBA(13, 110, 253, var(--bs-bg-opacity, 1))!important;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 19px 0px !important;
+}
+
+.contenedor_informacion_detalle_series {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 39px 30px;
+    margin-bottom: 47px;
+}
+
+.imagen_de_fondo {
+    background-image: url('https://www.comicbookherald.com/wp-content/uploads/2019/03/deepdish-marvel-1024x780.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    /* margin: 50px 0px 0px 0px; */
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.card {
+    background-color: initial;
+}
+
+p.card-text.badge.text-bg-danger {
+    margin-bottom: 32px;
+}
+
+.alinear_imagen_series {
+    display: flex;
+    align-items: center;
+}
+
+@media(max-width:650px) {
+    .titulo_detalle_serie {
+        font-size: 30px;
+        padding: 0px 40px;
+        line-height: 35px;
+        top: 36%;
+    }
+    .div_sombra {
+        width: 100%;
+        height: 100vh;
+        background-color: #000000c2;
+        position: absolute;
+        z-index: 12;
+        top: 48px;
+    }
+    button.btn.btn-danger {
+        width: 100%;
+        font-size: 17px;
+    }
+}
