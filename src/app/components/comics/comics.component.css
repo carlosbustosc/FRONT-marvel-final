@@ -138,12 +138,43 @@ select {
 }
 
 @media(max-width:385px) {
+
+    .texto_indicador{
+        font-size: 18px;
+        padding: 29px 20px 36px 20px !important;
+        line-height: 25px;
+    }
+
+    select{
+        font-family: 'Comic Neue', cursive;
+        font-size: 18px;
+    }
+
     .contenedor_select_comics {
         margin-top: 16px;
     }
 }
 
 @media(max-width:365px) {
+
+    label.texto_informativo{
+        line-height: 20px;
+        font-size: 17px;
+    }
+
+    button.btn.btn-primary.boton_busqueda_comic{
+        width: 89%;
+        margin: 8px 0px 41px 19px;
+        font-size: 17px;
+    }
+    
+    .texto_indicador{
+        font-size: 16px;
+        padding: 29px 20px 36px 20px !important;
+        line-height: 22px;
+    }
+
+
     .texto_indicador {
         font-size: 18px;
         padding: 29px 20px 36px 20px !important;

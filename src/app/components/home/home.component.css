@@ -188,6 +188,31 @@ p.titulo_pelicula {
 }
 
 @media(max-width:650px) {
+
+    .titulo_home{
+        font-size: 31px;
+        padding: 24px 0px 0px 0px;
+    }
+
+    .titulo_home.bajar_primer_titulo{
+        width: 100%;
+        font-size: 22px;
+    }
+
+    .contenedor_juegos_m{
+        padding: 23px 10px 36px 10px;
+    }
+
+    .titulo_comic_blanco {
+        text-align: center;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 13px 0px;
+    }
+
     p.titulo_pelicula {
         width: 100%;
         margin-bottom: 3px;
@@ -278,7 +303,33 @@ p.titulo_pelicula {
 }
 
 @media(max-width:385px) {
-    .titulo_comic_blanco[_ngcontent-qit-c52] {
+    .titulo_comic_blanco {
         font-size: 19px;
     }
+}
+
+
+@media(max-width:365px) {
+
+
+    p.texto_introducion_marvel{
+        color: #fff;
+        line-height: 27px;
+        font-family: 'Comic Neue', cursive;
+        font-size: 18px;
+    }
+
+    .contenido_peliculas{
+        padding: 42px 40px 36px 40px;
+    }
+
+    p.text-blanco{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .titulo_comic_blanco{
+        font-size: 17px;
+    }
+
 }

@@ -7,9 +7,10 @@
 
 @media(max-width:650px) {
     h1.titulo_juegos {
-        font-size: 20px !important;
+        font-size: 17px !important;
         text-align: center !important;
         margin-top: 74px !important;
+        margin-bottom: 20px !important;
     }
     .tarjeta_mobile {
         padding: 0px 30px;

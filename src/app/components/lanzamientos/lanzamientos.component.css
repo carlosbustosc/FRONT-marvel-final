@@ -97,6 +97,9 @@
 
 
 @media(max-width:650px) {
+
+
+    
     .contenedor_juegos {
         display: table;
         height: 100vh;

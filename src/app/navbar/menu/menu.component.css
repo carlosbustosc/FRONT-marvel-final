@@ -51,7 +51,14 @@
     }
 }
 
+
+
+
+
 @media( max-width: 650px) {
+
+   
+
     .esconder_desktop {
         display: none;
     }
@@ -88,6 +95,7 @@
         width: 100%;
         float: inherit;
         border-bottom: 1px solid #5d0a0a;
+        font-size: 13px;
     }
     a.botones_ltsx.cerrar_session.ocultar_menu.esconder_desktop {
         position: absolute;
@@ -99,7 +107,7 @@
         background-color: black;
         float: left;
         font-family: 'Comic Neue', cursive;
-        font-size: 19px;
+        font-size: 16px;
         border: 1px solid white;
     }
 }
