@@ -69,6 +69,7 @@ categoriaSeleccionada(){
       .subscribe( resp => {
       
         console.log(resp);
+        
         this.CargaSelect = resp;
 
         if(resp.length <= 0){

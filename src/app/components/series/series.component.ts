@@ -41,6 +41,10 @@ export class SeriesComponent implements OnInit {
     console.log(id);
   }
 
+
+
+
+  
   seleccionarTipoSerie( parametro:any ){
        
 
@@ -53,7 +57,10 @@ export class SeriesComponent implements OnInit {
 
                     this.seriesComboSelect = resp;
                     this.mostrarSeriesCombo  = true;
-                  } )
+                  }, (err => {
+
+                    console.log(err)
+                  }) )
   }
 
 }
